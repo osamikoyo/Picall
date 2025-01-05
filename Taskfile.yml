@@ -1,0 +1,11 @@
+version : 3
+
+tasks:
+  minio-get:
+    cmds:
+      - docker run -p 9000:9000 -p 9001:9001 -v /home/osami/minio --entrypoint "/usr/bin/minio" minio/minio server /data --console-address ":9001"
+  deps:
+    cmds:
+      - go get github.com/minio/minio-go/v7
+      - go get "github.com/BurntSushi/toml"
+      - go get "github.com/go-chi/chi/v5"
