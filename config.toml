@@ -1,0 +1,5 @@
+address = "localhost:8080"
+bucket = "images"
+secure = false
+
+minio_address = "localhost:9000"
